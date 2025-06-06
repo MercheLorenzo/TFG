@@ -1,0 +1,34 @@
+{
+	"site": {
+		"language": "es",
+		"title": "Santra Core Template",
+		"meta": {
+			"abstract": "Ofrece la estructura básica de código para el setup de un microservicio de la solución Santra™",
+			"description": "Plantilla para microservicios Python y FastAPI de la solución Santra™",
+			"keywords": "Nomia, Microservicios, FastAPI, Santra, SantraMe, Plantilla, Core"
+		}
+	},
+
+	"content": {
+		"welcome": "Bienvenido a",
+		"server": "Servidor",
+		"servidor": "Servidor Santra Me",
+		"documentacion": "Documentación",
+		"notasDeVersion": "Notas de Versión",
+		"politicaDePrivacidad": "Política de Privacidad",
+		"months": ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
+		"day_x": "día %s",
+		"sample_created": "Muestra creada con éxito",
+		"error": "No se proporcionaron datos",
+		"available_routes": "Lista de rutas disponibles",
+		"reserv": "Todos los derechos reservados.",
+		"choose": "Elegir"
+	},
+
+	"error": {
+		"not_found": "No se encontró el recurso solicitado.",
+		"invalid_data": "Los datos proporcionados son inválidos."
+	}
+
+}
+

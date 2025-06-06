@@ -1,0 +1,28 @@
+{
+	"site": {
+		"language": "it",
+		"title": "Modello di base Santra",
+		"meta": {
+			"abstract": "Offre la struttura di base per configurare un progetto di microservizio Santra™",
+			"description": "Template Python e FastAPI per un microservizio della soluzione Santra™",
+			"keywords": "Nomia, Microservizi, FastAPI, Santra, SantraMe, Template, Core"
+		}
+	},
+	"content": {
+		"welcome": "Benvenuto a",
+		"server": "Server",
+		"servidor": "Server Santra Me",
+		"documentacion": "Documentazione",
+		"notasDeVersion": "Note di rilascio",
+		"politicaDePrivacidad": "Politica sulla privacy",
+		"months": ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"],
+		"day_x": "giorno %s",
+		"sample_created": "Campione creato con successo",
+    	"error": "Nessun dato fornito",
+		"available_routes": "Elenco delle route disponibili",
+		"reserv": "Tutti i diritti riservati.",
+		"choose": "Scegliere"
+	},
+	"error": {
+	}
+}

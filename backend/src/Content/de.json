@@ -1,0 +1,28 @@
+{
+	"site": {
+		"language": "de",
+		"title": "Santra Kernvorlage",
+		"meta": {
+			"abstract": "Es bietet die grundlegende Struktur zur Einrichtung eines Santra™ Microservice-Projekts",
+			"description": "Template für Python und FastAPI für einen Santra™ Lösungs-Microservice",
+			"keywords": "Nomia, Microservices, FastAPI, Santra, SantraMe, Template, Core"
+		}
+	},
+	"content": {
+		"welcome": "Willkommen bei",
+		"server": "Server",
+		"servidor": "Santra Me Server",
+		"documentacion": "Dokumentation",
+		"notasDeVersion": "Versionshinweise",
+		"politicaDePrivacidad": "Datenschutzrichtlinie",
+		"months": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+		"day_x": "Tag %s",
+		"sample_created": "Probe erfolgreich erstellt",
+    	"error": "Keine Daten bereitgestellt",
+		"available_routes": "Verfügbare Routen",
+		"reserv": "Alle Rechte vorbehalten.",
+		"choose": "Wählen"
+	},
+	"error": {
+	}
+}

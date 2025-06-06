@@ -1,0 +1,149 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f0f8ff; /* Azul claro muy suave */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Blanco */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas en pantallas pequeñas */
+}
+
+/* Logo centrado */
+.logo img {
+    height: 100px;
+}
+
+/* Ajuste de los botones en los extremos */
+.left-buttons {
+    margin-left: 130px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.right-buttons {
+    margin-right: 130px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-buttons, .right-buttons {
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+}
+
+/* Botones */
+button {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #007BFF; /* Azul */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 5px;
+    transition: 0.3s;
+    min-width: 120px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilo para el contenedor de las opciones */
+.options-container {
+    align-items: center;
+    display: none; /* Ocultar inicialmente */
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Botones dentro de las opciones */
+.option-btn {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    font-size: 25px;
+    width: 80%; /* Ajustar al ancho del contenedor */
+    max-width: 400px; /* Evita que sean demasiado grandes en pantallas grandes */
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Responsive: reducir tamaño en móviles */
+@media (max-width: 480px) {
+    .option-btn {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+#response-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    min-height: 100px;
+    padding: 20px;
+    background: white;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Oculto por defecto */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-radius: 8px;
+    overflow: auto;
+}
+
+/* Asegurar que el contenido del JSON se divida en líneas */
+#response-content {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap; /* Mantiene el formato y permite saltos de línea */
+}
+
+.logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #0056B3;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #004494;
+}

@@ -1,0 +1,28 @@
+{
+	"site": {
+		"language": "zh",
+		"title": "Santra 核心模板",
+		"meta": {
+			"abstract": "它提供了设置 Santra™ 微服务项目的基本代码结构",
+			"description": "用于 Santra™ 解决方案微服务的 Python 和 FastAPI 模板",
+			"keywords": "Nomia, 微服务, FastAPI, Santra, SantraMe, 模板, 核心"
+		}
+	},
+	"content": {
+		"welcome": "欢迎来到",
+		"server": "服务器",
+		"servidor": "Santra Me 服务器",
+		"documentacion": "文档",
+		"notasDeVersion": "发行说明",
+		"politicaDePrivacidad": "隐私政策",
+		"months": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+		"day_x": "第 %s 天",
+		"sample_created": "样本创建成功",
+    	"error": "未提供数据",
+		"available_routes": "可用路线",
+		"reserv": "保留所有权利.",
+		"choose": "选择"
+	},
+	"error": {
+	}
+}

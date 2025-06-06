@@ -1,0 +1,122 @@
+<!-- 
+    Archivo: distribucion.html
+    Descripción: Página de novedades y changelog para la aplicación SANTRA™ ME.
+                 Proporciona un historial detallado de versiones, destacando el estado inicial
+                 del proyecto y los avances significativos en desarrollo.
+    Fecha de creación: Octubre de 2024
+    Última actualización: Diciembre de 2024
+    Propósito: Mantener informados a los usuarios sobre cambios, mejoras y actualizaciones futuras.
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', path='favicon.ico') }}">
+    <title>Novedades SANTRA™ ME</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #00a8eb; /* SANTRA COLOR */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        section {
+            margin: 20px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #00a8eb; /* SANTRA COLOR */
+            margin-bottom: 10px;
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid #00a8eb; /* SANTRA COLOR */
+            padding-left: 20px;
+            margin-left: 20px;
+            color: #555;
+            background-color: #f9f9f9;
+        }
+
+        blockquote p {
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #00a8eb; /* SANTRA COLOR */
+            color: white;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+
+        hr {
+            border: 1px solid #ccc;
+            width: 80%;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Novedades de SANTRA™ ME</h1>
+    </header>
+
+    <section>
+        <h3>{{ version }} - Versión Inicial</h3>
+        <blockquote>
+            <p><strong>Inicio del proyecto:</strong> Septiembre de 2024</p>
+            <p><strong>Estado actual:</strong> En desarrollo. La versión inicial está en progreso y aún no está completada.</p>
+        </blockquote>
+    </section>
+
+    <section>
+        <h3><strong>Actualización – Diciembre 2024:</strong></h3>
+        <blockquote>
+            <p>Actualmente, nos encontramos trabajando en la preparación del proceso de compilado y dockerización.</p>
+        </blockquote>
+    </section>
+
+    <section>
+        <h3><strong>Actualización – Principios de Marzo de 2025:</strong></h3>
+        <blockquote>
+            <p>Compilado y Dockerizacion ya disponibles. Desarrollando un frontend para una mejor experiencia del usuario.</p>
+        </blockquote>
+    </section>
+
+    <footer>
+        <hr />
+        <p>&copy; 2024 SANTRA™ ME. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

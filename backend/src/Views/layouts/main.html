@@ -1,0 +1,137 @@
+<!--
+  main.html
+  Este archivo HTML es la plantilla principal de la aplicación SANTRA™ Me. 
+  Contiene la estructura básica de la página, incluyendo la selección de idioma, 
+  el menú de navegación, y la presentación de información del servidor y de la 
+  aplicación. Se utiliza para mostrar contenido dinámico basado en el idioma 
+  seleccionado por el usuario y está diseñado para ser responsivo y accesible.
+-->
+<!DOCTYPE html>
+<html lang="{{ dic.site.language }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Nomia Energy">
+  <meta name="title" content="{{ dic.site.title }}" />
+  <meta name="keywords" content="{{ dic.site.meta.keywords }}" />
+  <meta name="description" content="{{ dic.site.meta.description }}" />
+  
+  <title>{{ dic.site.title }} {{ version }}</title>
+  <link rel="shortcut icon" href="{{ url_for('static', path='favicon.ico') }}">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    #iconoSantra img {
+      width: 100px; /* Ajusta el tamaño de tu icono aquí */
+      margin: 20px 0;
+    }
+    .container-fluid { 
+      background: #373636; /* Color de favicon */ 
+      color: white;
+      border-radius: 25px; /* Redondear las esquinas */
+      box-shadow: 0 0 15px #373636; /* Sombra difuminada */      
+      padding: 10px;
+      margin: 60px;
+      text-align: center;
+    }
+    .text-gray-500 {
+      color: white; /*6c757d*/
+      margin-bottom: 20px;
+    }
+    .language-selector {
+      margin: 20px 0;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      text-align: center;
+      color: #373636;
+    }
+    .menu {
+      margin: 20px 0;
+    }
+    .menu a {
+      margin: 0 10px;
+      color: #00a8eb; /* white o 00a8eb? - SANTRA COLOR */
+      text-decoration: none;
+    }
+    .menu a:hover {
+      text-decoration: underline;
+    }
+    .cicle {
+      color: #00a8eb; /* Color SANTRA */
+      font-size: x-large;
+    }
+  </style>
+</head>
+
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+      <div class="text-center">
+        <div id="iconoSantra">
+          <img src="{{ url_for('static', path='favicon.ico') }}" class="imgCenter" alt="Santra Image">
+        </div>
+        <p id="santra" class="cicle">SANTRA™ Me</p>
+        <p class="text-gray-500 mb-0">{{ dic.content.servidor }} {{ version }} - Environment: {{ environ }}</p>
+        
+        <!-- Language Selector -->
+        <div class="language-selector">
+          <select id="language-select" onchange="changeLanguage(this.value)">
+            <option value="" disabled selected>{{ dic.site.language }}</option>
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+            <option value="ch">中文</option>
+          </select>        
+        </div>
+        
+        <!-- Navigation Menu -->
+        <div class="menu">
+          <a href="/docs">{{ dic.content.documentacion }}</a> |
+          <a href="/distribucion">{{ dic.content.notasDeVersion }}</a> | 
+          <a href="/privacidad">{{ dic.content.politicaDePrivacidad }}</a>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- End of Main Content -->
+
+  <!-- Footer -->
+  <footer class="footer bg-white">
+    <div class="container my-auto">
+      <div class="copyright text-center my-auto">
+        <span>Copyright &copy; Nomia Energy {{ current_year }}</span>
+      </div>
+    </div>
+  </footer>
+  <!-- End of Footer -->
+
+  <script>
+    function changeLanguage(language) {
+      if (language === 'es') {
+        // Redirigir a /main sin el parámetro lang
+        window.location.href = '/main';
+      } else {
+        // Redirigir a la misma página con el parámetro lang
+        window.location.href = window.location.pathname + '?lang=' + language;
+      }
+    }
+  </script>
+</body>
+
+</html>

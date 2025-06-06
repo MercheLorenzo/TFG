@@ -1,0 +1,30 @@
+{
+	"site": {
+		"language": "fr",
+		"title": "Santra ME API",
+		"meta": {
+			"abstract": "Il offre la structure de code de base pour configurer un projet de microservice Santra™",
+			"description": "Template Python et FastAPI pour un microservice de solution Santra™",
+			"keywords": "Nomia, Microservices, FastAPI, Santra, SantraMe, Modèle, Core"
+		}
+	},
+
+	"content": {
+		"welcome": "Bienvenue à",
+		"server": "Serveur",
+		"servidor": "Serveur Santra Me",
+		"documentacion": "Documentation",
+		"notasDeVersion": "Notes de Version",
+		"politicaDePrivacidad": "Politique de confidentialité",
+		"months": ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],
+		"day_x": "jour %s",
+		"sample_created": "Échantillon créé avec succès",
+    	"error": "Aucune donnée fournie",
+		"available_routes": "Liste des routes disponibles",
+		"reserv": "Tous droits réservés.",
+		"choose": "Choisir"
+	},
+
+	"error": {
+	}
+}

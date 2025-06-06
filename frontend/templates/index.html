@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santra DEMO</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .logout-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #0056B3;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-button:hover {
+            background-color: #004494;
+        }
+
+        .dark-blue-button {
+            background-color: #0056B3;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .dark-blue-button:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="left-buttons">
+            <button class="toggle-btn" data-target="userOptionsContainer">Usuarios</button>
+            <button class="toggle-btn" data-target="workOptionsContainer">Trabajadores</button>
+        </div>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='santraPeque.jpg') }}" alt="Logo">
+        </div>        
+        <div class="right-buttons">
+            <button class="toggle-btn" data-target="mainOptionsContainer">Main</button>
+            <button class="toggle-btn" data-target="sampleOptionsContainer">Ejemplos</button>
+            <button class="toggle-btn" data-target="azureOptionsContainer">Azure AI</button>
+            <button class="logout-button" onclick="window.location.href='{{ url_for('logout') }}'">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <!-- Contenedores de opciones -->
+    <div class="options-container" id="mainOptionsContainer">
+        <button class="option-btn" data-url="http://localhost:8000/mainRoutes/get-status">Estado del Servidor</button>
+        <button class="option-btn" id="getVersionBtn">API Version</button>
+        <button class="option-btn" data-url="http://localhost:8000/mainRoutes/get-error-sample">Ejemplo de Respuesta de Error</button>
+    </div>
+
+    <div class="options-container" id="sampleOptionsContainer">
+        <button class="option-btn" id="sumNumbersBtn">Sumar 2 números</button>
+        <button class="option-btn" data-url="http://localhost:8000/sampleRoutes/get-current-time">Hora UTC</button>
+        <button class="option-btn" data-url="http://localhost:8000/sampleRoutes/get-current-time-cet">Hora CET (España)</button>
+        <button class="option-btn" id="generateRandomStringBtn">Generar string aleatorio</button>
+        <button class="option-btn" id="infoCalderaBtn">Info de caldera/sala</button>
+        <button class="option-btn" id="generateTokenBtn">Generar Token JWT</button>
+        <button class="option-btn" id="verifyTokenBtn">Verificar Token JWT</button>
+    </div>
+
+    <div class="options-container" id="workOptionsContainer">
+        <button class="option-btn" id="createWorkerBtn">Crear trabajador en la BD</button>
+        <button class="option-btn" id="searchWorkerEmailBtn">Buscar trabajador por email</button>
+        <button class="option-btn" data-url="http://localhost:8000/workerRoutes/count-workers">Num total trabajadores</button>
+        <button class="option-btn" id="searchWorkerBtn">Buscar trabajadores</button>
+    </div>
+
+    <div class="options-container" id="userOptionsContainer">
+        <button class="option-btn" id="createUserBtn">Crear usuario en la BD</button>
+        <button class="option-btn" id="searchUserEmailBtn">Buscar usuario por email</button>
+        <button class="option-btn" data-url="http://localhost:8000/userRoutes/count-users">Num total usuarios</button>
+        <button class="option-btn" id="searchUserBtn">Buscar usuarios</button>
+    </div>
+
+    <div class="options-container" id="azureOptionsContainer">
+        <button class="option-btn redirect-btn dark-blue-button" id="historialBtn" data-url="http://localhost:5000/historial">Historial</button>
+        <button class="option-btn redirect-btn" id="translateTextBtn" data-url="http://localhost:5000/translator">Traducir Texto</button>
+        <button class="option-btn redirect-btn" id="detectLanguageBtn" data-url="http://localhost:5000/detect">Detectar Idioma</button>
+        <button class="option-btn redirect-btn" id="describeImageBtn" data-url="http://localhost:5000/vision">Descripción de Imagen</button>
+        <button class="option-btn redirect-btn" id="analyzeSentimentBtn" data-url="http://localhost:5000/sentiment">Analizar Sentimiento</button>
+        <button class="option-btn redirect-btn" id="detectFacesBtn" data-url="http://localhost:5000/face">Detectar Rostros</button>
+        <button class="option-btn redirect-btn" id="summarizeText" data-url="http://localhost:5000/summarize">Resumir Texto</button>
+        <button class="option-btn redirect-btn" id="texttospeech" data-url="http://localhost:5000/speak">Texto a Voz</button>
+    </div>    
+
+    <div id="response-container">
+        <pre id="response-content">Aquí se mostrará la respuesta...</pre>
+    </div>    
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

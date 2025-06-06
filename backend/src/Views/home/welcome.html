@@ -1,0 +1,103 @@
+<!--
+    Archivo: welcome.html
+    Descripción:
+    Esta es la plantilla HTML de bienvenida para la aplicación. Muestra un mensaje de bienvenida al usuario, 
+    la descripción del sitio y la información de la versión actual de la aplicación. También incluye 
+    un selector de idioma para que el usuario pueda cambiar el idioma de la interfaz.
+-->
+<!DOCTYPE html>
+<html lang="{{ dic.site.language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ dic.site.meta.description }}">
+    <meta name="keywords" content="{{ dic.site.meta.keywords }}">
+    <title>{{ dic.site.title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', path='favicon.ico') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #00a8eb; /* Color SANTRA */
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .welcome-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            text-align: center;
+            color: #777;
+        }
+        .version-info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #e7f3fe;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h1 class="blanco">{{ dic.content.welcome }} {{ dic.site.title }} version {{ version }}</h1>
+        <p>{{ dic.site.meta.description }}</p>
+        <div class="version-info">
+            <strong>{{ dic.content.notasDeVersion }}: </strong> {{ dic.content.notasDeVersion }}
+        </div>
+        <p></p>      
+        <div>
+            <strong>{{ dic.content.server }}: </strong> {{ dic.content.servidor }}
+        </div>
+
+        <p></p>
+
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <label for="language-select">{{ dic.site.language }}: </label>
+            <select id="language-select" onchange="changeLanguage(this.value)">
+            <option value="">{{ dic.content.choose }}</option>
+            <option value="es">Spanish</option>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="ch">Chinese</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; {{ current_year }} - {{ dic.site.title }}. {{ dic.content.reserv }}</p>
+    </div>
+
+    <script>
+        function changeLanguage(language) {
+          if (language === 'es') {
+            // Redirigir a /main sin el parámetro lang
+            window.location.href = '/';
+          } else {
+            // Redirigir a la misma página con el parámetro lang
+            window.location.href = window.location.pathname + '?lang=' + language;
+          }
+        }
+    </script>
+</body>
+</html>

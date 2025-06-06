@@ -74,6 +74,9 @@ Bienvenido/a al repositorio del TFG de Mercedes Lorenzo Aragón. Aquí tienes in
 
 ## 📄 Notas
 
-* Asegúrate de tener Docker instalado y funcionando.
-* Las rutas de los archivos .env y las carpetas montadas (-v) deben existir y contener la configuración necesaria.
-* Para salir de los contenedores usa Ctrl + C.
+- Asegúrate de tener Docker instalado y funcionando.
+- Las rutas de los archivos `.env` y las carpetas montadas (`-v`) deben existir y contener la configuración necesaria.
+- Para salir de los contenedores usa `Ctrl + C`.
+- Debes tener el contenedor de **MongoDB Community Server** en tu Docker y abierto para que se conecten a la base de datos.  
+  Puedes encontrarlo aquí: [MongoDB Community Server en Docker Hub](https://hub.docker.com/r/mongodb/mongodb-community-server)
+

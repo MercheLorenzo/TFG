@@ -17,3 +17,63 @@ Bienvenido/a al repositorio del TFG de Mercedes Lorenzo Aragón. Aquí tienes in
    ```bash
     source venv/bin/activate
    ```
+   
+3. Instala las dependencias:
+
+   ```bash
+    pip install -r requirements.txt
+   ```
+
+4. Construye la imagen Docker:
+
+   ```bash
+    docker build -t backend .
+   ```
+   
+5. Ejecuta el contenedor Docker:
+
+   ```bash
+    docker run -p 8000:8000 --env-file /home/mercedes/config/.env.development -v /home/mercedes/config:/microservice/config -it backend
+   ```
+
+---
+
+## 🌐 Cómo ejecutar el frontend
+
+1. Entra en la carpeta del frontend:
+
+   ```bash
+   cd backend
+   ```
+
+2. Activa el entorno virtual:
+   
+   ```bash
+    source venv2/bin/activate
+   ```
+   
+3. Instala las dependencias:
+
+   ```bash
+    pip install -r requirements.txt
+   ```
+
+4. Construye la imagen Docker:
+
+   ```bash
+    docker build -t flask-frontend .
+   ```
+
+6. Ejecuta el contenedor Docker:
+
+   ```bash
+    docker run -p 5000:5000 --env-file /home/mercedes/frontConfig/.env -v /home/mercedes/frontConfig:/frontend/config -it flask-frontend
+   ```
+
+---
+
+## 📄 Notas
+
+* Asegúrate de tener Docker instalado y funcionando.
+* Las rutas de los archivos .env y las carpetas montadas (-v) deben existir y contener la configuración necesaria.
+* Para salir de los contenedores usa Ctrl + C.

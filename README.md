@@ -43,7 +43,7 @@ Bienvenido/a al repositorio del TFG de Mercedes Lorenzo Aragón. Aquí tienes in
 1. Entra en la carpeta del frontend:
 
    ```bash
-   cd backend
+   cd frontend
    ```
 
 2. Activa el entorno virtual:
